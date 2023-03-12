@@ -12,6 +12,7 @@ body {background-color: #eab676;}
     color: white;
     padding: 1rem;
     height: 4rem;
+    border-radius: 10px;
   }
 
 .button_menu {
@@ -46,3 +47,43 @@ body {background-color: #eab676;}
     padding: 0 2.6rem;
   }
 }
+
+.catalog {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+.book {
+    background-color: #eab676;
+    color: white;
+    padding: 1rem;
+    height: 45rem;
+    width:35rem;
+  }
+
+  @media (min-width: 600px) {
+    .catalog { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  img{
+width: 35rem;
+height: 38rem;
+border-radius: 10px;
+  }
+
+img:hover {
+    transform: scale(1.05);
+  }
+
+  .title{
+    width: 35rem;
+    height: 5rem;
+    background-color: #994d00;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 2rem;
+    border-radius: 10px;
+    }
+  
