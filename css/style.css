@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Varela+Round&display=swap');
+
+body {margin:0;}
+
+  .navbar{
+    display: flex;
+    background-color:#24252A;
+    position: fixed;
+    top:0;
+    width: 100%;
+    font-size: 20px;
+    font-family: Varela Round;
+}
+
+.nav-right{
+    text-align: right;
+    float:right;
+}
+
+.section-1{
+    padding:40px;
+    background-image: url("/Book-Store-main/BookStore/images/library3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height:550px;
+    background-size: 100% 100%;
+    font-family: Varela Round;
+
+
+}
+
+.section-1-text{
+    display: block;
+    border: black;
+}
+
+h1{
+    font-size: 100px;
+    color: white;
+}
+.section-1 p{
+    font-size: 20px;
+    color: white;
+}
+
+.section-2
+{
+  font-family: Varela Round;
+  margin: auto;
+  width: 100%;
+  border: 3px solid#24252A;
+  text-align: center;
+  background: #A8A8A8
+}
+
+.gallery div{
+  display: inline-block !important;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  
+}
+
+.section-2  a{
+    text-decoration: none;
+}
+
+.section-2 p{
+    color: black;
+    text-align: center;
+}
+
+
+div.gallery a:hover {
+    border: 1px solid white;
+}
+
+div.gallery image-holder desc {
+    text-align: center;
+}
+
+img{
+    height: 300px;
+    width:250px;
+}
+
+.btn
+{
+    display: block;
+    border-radius: 5px;
+    color:white;
+    background-color: #24252A;
+    font-size:20px;
+    text-decoration: none;
+    width:fit-content;
+    height:fit-content;
+    padding:5px;
+}
+
+.btn:hover{
+    background-color: #555;
+}
+
+li {
+    display: inline;
+    float: left;
+    padding-left: 15px;
+  }
+
+  li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color:white;
+  }
+
+  li ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li a:hover {
+    background-color: #555;
+  }
+
+  .active {
+    background-color: #555;
+  }
+
+/* section-3 image gallery 2 */
+
+  .section-3{
+      padding:35px;
+  }
+
+  
+  .view-card {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    display: inline;
+
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .container {
+    padding: 2px 16px;
+    align-items: center;
+  }
+
+
+  /* section-4 brands */
+  .section-4{
+    padding-top:3%;
+    padding-left: 16%;
+    padding-bottom: 3%;
+    font-family: Varela Round;
+  }
+   .partnerzy div{
+      display: inline-block !important;
+      position: flex;
+      margin: 0 auto;
+      padding-left: 3%;
+      overflow: hidden;
+   }
+  .brand{
+      width: 23%;
+      display: inline;
+  }
+
+  .brand img{
+      height: 175px;
+  }
+
+  *{
+  
+    box-sizing: border-box;
+
+}
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+    font-family: Varela Round;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+  
