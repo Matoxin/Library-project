@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/login.css">
 <title> CSS Login Screen Tutorial </title>
+<!--TEN STYLE ZASTĄP JAKIMS I TO POTEM USUŃ-->
+<style>
+  table, th, td {
+   border: 1px solid red;
+   border-spacing: 0;
+   }
+</style>
+<script src="script.js"></script>
 </head>
 <body>
-  <body>
+  
     <nav class="navbar">
         <div class="nav-right">
           <li><a href="index.html">Główna</a></li>
@@ -16,6 +25,61 @@
         </div>
     </nav>
 
+
+    <div class="center">
+
+      <!--DODAWANIE USEROW-->
+      <form id="signup" onsubmit="event.preventDefault()"><!--event.preventDefault() zapobiega odswiezeniu stronki po kliknieciu submit-->
+          
+        Zarządzanie użytkownikami
+
+        <div class="txt_field">
+          <input type="email" id="email" required><br>
+          <span></span>
+          <label>E-mail</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="password" id="password" required><br>
+          <span></span>
+          <label>Hasło</label>
+        </div>
+
+        <!--TEN PRZEŁĄCZNIK MOŻNA WYSTYLIZOWAĆ-->
+        Wybierz role:   <br>
+        <input type="radio" name="role" id="customer" value="customer" checked>
+        <label for="customer">Klient</label><br>
+        
+        <input type="radio" name="role" id="librarian" value="librarian">
+        <label for="librarian">Bibliotekarz</label><br>
+
+        <input type="submit" value="Dodaj" onclick="addUser()">
+    
+      </form>
+
+      <br><br><br>
+
+      <!--WYSWIETLANIE USEROW-->
+      <br><br>
+      <div id="forAdmin">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Adres</th>
+                      <th>Hasło</th>
+                      <th>Rola</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  
+              </tbody>
+              <tr>
+                  <td colspan="4" style="text-align: center;"><button onclick="onDisplay()">Pokaż wszystkich użytkowników</button></td>
+              </tr>
+          </table>
+      </div>
+    </div>
 
 
 
