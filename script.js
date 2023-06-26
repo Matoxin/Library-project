@@ -40,7 +40,7 @@ function signIn(){
 
     //warunek na konto admina
     if(email == "admin" && password == "admin"){
-        window.location.href = 'index.html';
+        window.location.href = 'adminPanel.html';
     }
     //warunek na konto bibliotekarza
     else if(exist && isLibrarian){
