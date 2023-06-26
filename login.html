@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -7,25 +6,26 @@
     <link rel="stylesheet" href="./css/login.css">
   </head>
   <body>
-    <div class="center">
+    
+  <div class="center">
+    <form id="signin" onsubmit="event.preventDefault()"><!--event.preventDefault() zapobiega odswiezeniu stronki po kliknieciu submit-->
       <h1>Zaloguj się</h1>
-      <form method="post">
-        <div class="txt_field">
-          <input type="text" required>
-          <span></span>
-          <label>Nazwa użytkownika</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required>
-          <span></span>
-          <label>Hasło</label>
-        </div>
-        <input type="submit" value="Zaloguj">
-        <div class="signup_link">
-          Nie posiadzasz konta? <a href="#">Zarejestruj się</a>
-        </div>
-      </form>
-    </div>
 
+      <div class="txt_field">
+        <input type="email" id="email" required><br>
+        <span></span>
+        <label>Nazwa użytkownika</label>
+      </div>
+      
+      <div class="txt_field">
+        <input type="password" id="password" required><br>
+        <span></span>
+        <label>Hasło</label>
+      </div>
+
+      <input type="submit" value="Zaloguj się " onclick="signIn()">
+    </form>
+  </div>
+  
   </body>
 </html>
