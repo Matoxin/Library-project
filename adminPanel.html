@@ -2,12 +2,12 @@
 <html>
 <head>
 <link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/login.css">
+<link rel="stylesheet" href="./css/admin.css">
 <title> CSS Login Screen Tutorial </title>
 <!--TEN STYLE ZASTĄP JAKIMS I TO POTEM USUŃ-->
 <style>
   table, th, td {
-   border: 1px solid red;
+   border: 1px solid black;
    border-spacing: 0;
    }
 </style>
@@ -30,13 +30,13 @@
 
       <!--DODAWANIE USEROW-->
       <form id="signup" onsubmit="event.preventDefault()"><!--event.preventDefault() zapobiega odswiezeniu stronki po kliknieciu submit-->
-          
-        Zarządzanie użytkownikami
+          <br>
+        <center>Zarządzanie użytkownikami</center>
 
         <div class="txt_field">
           <input type="email" id="email" required><br>
           <span></span>
-          <label>E-mail</label>
+          <label>Login</label>
         </div>
 
         <div class="txt_field">
@@ -46,18 +46,21 @@
         </div>
 
         <!--TEN PRZEŁĄCZNIK MOŻNA WYSTYLIZOWAĆ-->
-        Wybierz role:   <br>
-        <input type="radio" name="role" id="customer" value="customer" checked>
-        <label for="customer">Klient</label><br>
-        
-        <input type="radio" name="role" id="librarian" value="librarian">
-        <label for="librarian">Bibliotekarz</label><br>
-
+        Wybierz rolę:   <br>
+        <div class="radio-toolbar">
+          <input type="radio" id="role1" name="radioRole" value="librarian" checked>
+          <label for="role1">Bibliotekarz</label>
+      
+          <input type="radio" id="role2" name="radioRole" value="user">
+          <label for="role2">Użytkownik</label>
+      </div>
+      <p>&nbsp;</p>
+        <br>
         <input type="submit" value="Dodaj" onclick="addUser()">
     
       </form>
 
-      <br><br><br>
+      <br>
 
       <!--WYSWIETLANIE USEROW-->
       <br><br>

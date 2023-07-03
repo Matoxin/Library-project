@@ -51,6 +51,36 @@ body {margin:0;
 
 /* body section  */
 
+form{
+  background: #fff;
+  width: 200px;
+  height: 50px;
+  display: flex;
+}
+
+form input{
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+form button{
+  background: tomato;
+  padding: 10px 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+}
+
+form .fa-search{
+  align-self: center;
+  padding: 10px 20px;
+  color: #777;
+}
+
 .section-body{
     
     padding-top: 30px;
