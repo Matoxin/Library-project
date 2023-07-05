@@ -40,17 +40,17 @@ function signIn(){
 
     //warunek na konto admina
     if(email == "admin" && password == "admin"){
-        window.location.href = 'adminPanel.html';
+        window.location.href = 'catalogAdmin.html';
     }
     //warunek na konto bibliotekarza
     else if(exist && isLibrarian){
         alert("konto bibliotekarzyka");
-        //window.location.href = 'index.html';
+        window.location.href = 'catalogLib.html';
     }
     //warunek na konto customera
     else if(exist && !isLibrarian){
         alert("konto ciecia");
-        //window.location.href = 'index.html';
+        window.location.href = 'index.html';
     }
     else{
         alert("błędne passy")
