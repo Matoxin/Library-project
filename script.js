@@ -12,7 +12,7 @@ function addUser(){
         formData.push({
             email: document.getElementById('email').value,
             password: document.getElementById('password').value,
-            role: document.querySelector('input[name="role"]:checked').value
+            role: document.querySelector('input[name="radioRole"]:checked').value
         });
         
         localStorage.setItem('formData', JSON.stringify(formData));

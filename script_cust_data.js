@@ -37,7 +37,14 @@ function displayResults(books) {
   } else {
     books.forEach(book => {
       const bookElement = document.createElement('div');
-      bookElement.innerHTML = `<strong>ID:</strong> ${book.id}<br><strong>Tytuł:</strong> ${book.title}<br><strong>Autor:</strong> ${book.author}`;
+      bookElement.classList.add('image-holder');
+      bookElement.innerHTML = `
+      <a href="#">
+        <a href="#popup-box"><img src="${book.image}"></a>
+      </a><br>
+      <strong>ID:</strong> ${book.id}<br>
+      <strong>${book.title}</strong> <br>
+      <strong>${book.author}</strong> `;
       bookElement.addEventListener('click', () => showBookDetails(book));
       searchResults.appendChild(bookElement);
     });
