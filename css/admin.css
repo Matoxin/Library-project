@@ -9,7 +9,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-image: url("/Book-Store-main/BookStore/Library-project/images/background.jpg");
+  background-image: url("../images/background.jpg");
   height: 100vh;
   overflow: hidden;
 }
