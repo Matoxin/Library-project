@@ -63,6 +63,7 @@ body {margin:0;
 .vertical-nav
 {
     padding-top: 10px;
+    float: left;
 }
 
 
@@ -101,6 +102,7 @@ body {margin:0;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
     transition-duration:200ms;
     transition-timing-function: ease-out;
+    width: 250px;;
   }
   
   .image-holder:hover {
@@ -196,8 +198,8 @@ p {
 }
 footer {
   position: static;
-  width: 100vw; /* Use 100vw to span the full width of the screen */
-  max-width: 100%; /* Ensure the footer doesn't exceed the screen width */
+  width: 100vw; 
+  max-width: 100%; 
   background: #111;
   height: auto;
   font-family: "Open Sans";
@@ -206,7 +208,7 @@ footer {
   font-family: "Varela Round";
   overflow: auto;
   box-sizing: border-box;
-  margin: 0; /* Reset any unwanted margins */
+  margin: 0; 
 }
 .footer-content{
   display: flex;
@@ -266,11 +268,19 @@ footer {
   opacity: .4;
   font-weight: 200;
 }
-form{
+#searchForm{
   background: #fff;
   width: 200px;
   height: 50px;
   display: flex;
+}
+input{
+  height: 35px;
+}
+textarea{
+  width: 250px;
+  height: 35px;
+  resize: none;
 }
 
 form input{
@@ -294,4 +304,20 @@ form .fa-search{
   align-self: center;
   padding: 10px 20px;
   color: #777;
+}
+.btn
+{
+    
+    border-radius: 5px;
+    color:white;
+    background-color: #24252A;
+    font-size:20px;
+    text-decoration: none;
+    width:fit-content;
+    height:fit-content;
+    padding:5px;
+}
+
+.btn:hover{
+    background-color: #555;
 }

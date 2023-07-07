@@ -10,39 +10,33 @@
         <link rel="stylesheet" href="./css/catalog.css">
         <title>Biblioteka MWM</title>
     </head>
-    <body>
+    <body onload="displayResults(books)">
+        
         <nav class="navbar">
             <div class="nav-right">
-                <li><a href="index.html">Główna</a></li>
+            <li><a href="index.html">Główna</a></li>
             <li><a href="catalog.html">Katalog</a></li>
             <li><a href="about.html">O nas</a></li>
             <li><a href="login.html">Zaloguj</a></li>
             </div>
         </nav>
-
         <div class="section-body">
-			<form>
-				<div class="container">
-					<i class="fas fa-search"></i>
-					<input type="text" id="searchInput" placeholder="Wyszukaj książkę">
-					<div id="searchResults"></div>
-					<div id="bookDetails" class="hidden"></div>
-				</div>
-			</form>
-			
-            <div class="gallery-main" style="margin-left:25%;padding:1px 16px;height:1000px;"></div>            
-        </div>
-			<!--
-			<div class="vertical-nav">
-                <ul>
-                    <h4><left>Kategorie</left></h4>
-                    <li><a href="#Adventure">Przygodowe</a></li>
-                    <li><a href="#Thriller">Thriller</a></li>
-                    <li><a href="#Romantic">Romantyczne</a></li>
-                    <li><a href="#Comedy">Komedie</a></li>
-                </ul>    
-            </div> -->
 
+            <br>
+            <form>
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Wyszukaj książkę">
+                
+            </form>
+			<br>
+            
+                <div class="Adventure" id="Adventure">
+                    <div id="searchResults"></div>
+                    <div id="bookDetails" class="hidden"></div>
+                </div>
+
+        </div>
+        <br>
 
         <footer>
             <div class="footer-content">
@@ -60,6 +54,6 @@
                 <p>copyright &copy;2023 KSIĘGARNIA MWM</p>
             </div>
         </footer>
-		<script src="script_lib_data.js"></script>
+        <script src="script_lib_data.js"></script>
     </body>
 </html>
