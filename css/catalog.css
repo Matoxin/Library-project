@@ -274,7 +274,7 @@ footer {
   height: 50px;
   display: flex;
 }
-input{
+#adminRights input{
   height: 35px;
 }
 textarea{
