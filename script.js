@@ -44,13 +44,11 @@ function signIn(){
     }
     //warunek na konto bibliotekarza
     else if(exist && isLibrarian){
-        alert("konto bibliotekarzyka");
-        window.location.href = 'indexLib.html';
+        window.location.href = 'mainLib.html';
     }
     //warunek na konto customera
     else if(exist && !isLibrarian){
-        alert("konto klienta");
-        window.location.href = 'indexCust.html';
+        window.location.href = 'mainCust.html';
     }
     else{
         alert("błędne passy")
