@@ -66,6 +66,10 @@ function showBookDetails(book) {
     <p><strong>Autor:</strong> ${book.author}</p>
     <p><strong>Opis:</strong> ${book.description}</p>
 	 
+    <h3>Zarządzanie książkami</h3>
+    <button onclick="showAddBookForm()" class="btn">Dodaj książkę</button>
+    <button onclick="showEditBookForm()" class="btn">Zedytuj ksiązkę</button>
+    <button onclick="showDeleteBookForm()" class="btn">Usuń książkę</button>
   `;
 
 
@@ -107,5 +111,142 @@ function returnBook(book) {
   bookDetails.style.padding = '20px';
   bookDetails.style.borderRadius = '5px';
   
+//skrypt dodawania
+function addBook(book) {
+  const newBookId = books.length > 0 ? books[books.length - 1].id + 1 : 1;
+  book.id = newBookId;
+  books.push(book);
+  displayResults(books);
+  alert(`Książka "${book.title}" została pomyślnie dodana`);
+}
+
+//skrypt edytowania
+function editBook(book) {
+  const bookIndex = books.findIndex(b => b.id === book.id);
+
+  if (bookIndex !== -1) {
+    books[bookIndex] = book;
+	displayResults(books);
+    alert(`Książka "${book.title}" została pomyślnie zeedytowana`);
+  } else {
+    alert('Nie odnaleziono książki');
+  }
+}
+
+//skrypt usuwania
+function deleteBook(bookId) {
+  const bookIndex = books.findIndex(b => b.id === bookId);
+
+  if (bookIndex !== -1) {
+    const bookTitle = books[bookIndex].title;
+    books.splice(bookIndex, 1);
+	displayResults(books);
+    alert(`Książka "${bookTitle}" została pomyślnie usunięta`);
+  } else {
+    alert('Nie odnaleziono książki');
+  }
+}
+
+
+//panel dodawania
+function showAddBookForm() {
+  document.getElementById("adminRights").innerHTML="";
+  const form = document.createElement('form');
+  adminRights.innerHTML=`<h3>Dodaj książkę</h3>`;
+  form.innerHTML = `
+    <label for="add-book-title">Tytuł:
+    <input type="text" id="add-book-title" required>
+    </label>
+    <label for="add-book-author">Autor:
+    <input type="text" id="add-book-author" required>
+    </label>
+    <label for="add-book-description">Opis:
+    <textarea id="add-book-description" required></textarea>
+    </label>  
+    <button type="submit" class="btn">Dodaj</button>
+  `;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const titleInput = document.getElementById('add-book-title');
+    const authorInput = document.getElementById('add-book-author');
+    const descriptionInput = document.getElementById('add-book-description');
+    const newBook = {
+      title: titleInput.value,
+      author: authorInput.value,
+      description: descriptionInput.value,
+      available: true,
+      borrowed: false,
+      reserved: false
+    };
+    addBook(newBook);
+    form.reset();
+  });
+  document.getElementById("adminRights").appendChild(form);
+  
+}
+
+//panel edytowania
+function showEditBookForm() {
+  document.getElementById("adminRights").innerHTML="";
+  const form = document.createElement('form');
+  adminRights.innerHTML=`<h3>Zedytuj książkę</h3>`;
+  form.innerHTML = `
+    <label for="edit-book-id">ID książi:
+    <input type="number" id="edit-book-id" required>
+    </label>
+    <label for="edit-book-title">Tytuł:
+    <input type="text" id="edit-book-title" required>
+    </label>
+    <label for="edit-book-author">Autor:
+    <input type="text" id="edit-book-author" required>
+    </label>
+    <label for="edit-book-description">Opis:
+    <textarea id="edit-book-description" required></textarea>
+    </label>
+    <button type="submit" class="btn">Edytuj</button>
+  `;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const idInput = document.getElementById('edit-book-id');
+    const titleInput = document.getElementById('edit-book-title');
+    const authorInput = document.getElementById('edit-book-author');
+    const descriptionInput = document.getElementById('edit-book-description');
+    const bookId = parseInt(idInput.value);
+    const updatedBook = {
+      id: bookId,
+      title: titleInput.value,
+      author: authorInput.value,
+      description: descriptionInput.value,
+      available: true,
+      borrowed: false,
+      reserved: false
+    };
+    editBook(updatedBook);
+    form.reset();
+  });
+  document.getElementById("adminRights").appendChild(form);
+}
+
+//panel usuwania
+function showDeleteBookForm() {
+  document.getElementById("adminRights").innerHTML="";
+  const form = document.createElement('form');
+  adminRights.innerHTML=`<h3>Usuń książkę</h3>`;
+  form.innerHTML = `<br>
+    
+    <label for"delete-book-id">ID książki:
+    <input type="number" id="delete-book-id" required>
+    </label>
+    <button type="submit" class="btn">Usuń</button>
+  `;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const idInput = document.getElementById('delete-book-id');
+    const bookId = parseInt(idInput.value);
+    deleteBook(bookId);
+    form.reset();
+  });
+  document.getElementById("adminRights").appendChild(form);
+}
   
   

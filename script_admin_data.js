@@ -81,6 +81,7 @@ function addBook(book) {
   const newBookId = books.length > 0 ? books[books.length - 1].id + 1 : 1;
   book.id = newBookId;
   books.push(book);
+  displayResults(books);
   alert(`Książka "${book.title}" została pomyślnie dodana`);
 }
 
@@ -90,6 +91,7 @@ function editBook(book) {
 
   if (bookIndex !== -1) {
     books[bookIndex] = book;
+	displayResults(books);
     alert(`Książka "${book.title}" została pomyślnie zeedytowana`);
   } else {
     alert('Nie odnaleziono książki');
@@ -103,6 +105,7 @@ function deleteBook(bookId) {
   if (bookIndex !== -1) {
     const bookTitle = books[bookIndex].title;
     books.splice(bookIndex, 1);
+	displayResults(books);
     alert(`Książka "${bookTitle}" została pomyślnie usunięta`);
   } else {
     alert('Nie odnaleziono książki');
