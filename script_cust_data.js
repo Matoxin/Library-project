@@ -77,8 +77,6 @@ function showBookDetails(book) {
   }
 
   bookDetails.classList.remove('hidden');
-  
-    // Add CSS styles to the bookDetails element
   bookDetails.style.padding = '20px';
   bookDetails.style.borderRadius = '5px';
 

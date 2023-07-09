@@ -48,9 +48,6 @@ body {margin:0;
     background-color: #555;
   }
 
-
-/* body section  */
-
 .section-body{
     
     padding-top: 30px;
@@ -94,9 +91,6 @@ body {margin:0;
     background-color: #555;
     color: white;
   }
-
-/* 
-  section-2 */
 
   .image-holder{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
